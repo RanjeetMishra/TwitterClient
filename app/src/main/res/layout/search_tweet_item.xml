@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/profilescale"
+        android:layout_height="@dimen/profilescale"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/pad10"
+        android:layout_marginTop="@dimen/pad10"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/tweetcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profile_image"
+        android:layout_marginTop="@dimen/pad8"
+        android:layout_marginLeft="@dimen/pad10"
+        android:layout_marginRight="@dimen/pad8">
+
+        <RelativeLayout
+            android:id="@+id/usercontent"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp">
+
+            <myntrattest.viewutils.TextViewBold
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sachin Paji"
+                android:textSize="@dimen/size16"
+                android:textColor="@color/black"
+                android:layout_alignParentBottom="true" />
+
+            <myntrattest.viewutils.TextViewRegular
+                android:id="@+id/user_alias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/user_name"
+                android:textSize="@dimen/size13"
+                android:text="sachin"
+                android:layout_marginLeft="@dimen/pad10"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <myntrattest.viewutils.TextViewRegular
+            android:id="@+id/tweet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/usercontent"
+            android:textSize="@dimen/size13"
+            android:text="lkhasli jkashgdu uwdgiug uqwgiuygqwd uqwgyduygqw qwudgiuqwygiuqg qwuygdiuqwygdiuyg uigqwdiug ljasflashflksagflksdf egflwehgflkshv ejhflgfilgef"
+            android:layout_marginTop="@dimen/pad5"
+            android:textColor="@color/font_color"
+            android:gravity="left" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/pad1"
+        android:layout_below="@id/tweetcontent"
+        android:background="@color/dark2"
+        android:layout_marginTop="@dimen/pad10"/>
+</RelativeLayout>

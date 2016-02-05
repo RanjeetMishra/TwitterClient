@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/light_blue">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/pad5"
+            android:layout_marginRight="@dimen/pad5"
+            android:background="@null"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/search_icon_container"
+                android:layout_width="@dimen/height40"
+                android:layout_height="@dimen/height40"
+                >
+
+                <myntrattest.viewutils.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:text="@string/search_thin"
+                    android:textSize="@dimen/size20" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_tagtext_root"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+
+                <myntrattest.viewutils.CustomEditText
+                    android:id="@+id/search_tagtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/pad5"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:hint="@string/search_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/dark4"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/size16" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/search_close_container"
+                android:layout_width="@dimen/height40"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <myntrattest.viewutils.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/close_thin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size13" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+</FrameLayout>
