@@ -48,7 +48,6 @@ public class TwitterApp extends Application{
     public RequestWrapper getRequestWrapper() {
         if(requestWrapper==null) {
             requestWrapper = new RequestWrapper(new RestAdapter.Builder().setEndpoint(Constants.TWITTER_URL).build());
-            requestWrapper.restAdapter.setLogLevel(RestAdapter.LogLevel.FULL);
         }
         return requestWrapper;
     }
